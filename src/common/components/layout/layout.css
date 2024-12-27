@@ -1,0 +1,22 @@
+/* Default style for the input */
+.search.ant-input-affix-wrapper {
+  border: 2px solid #ffffff !important; /* Default border color */
+  border-radius: 20px !important; /* Default border radius */
+  height: 40px !important; /* Default height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Box shadow */
+  width: 40px; /* Small width by default */
+  background-color: transparent !important; /* Make the background transparent */
+  color: #ffffff;
+  transition: width 0.3s ease, margin-left 0.3s ease; /* Smooth width and position change */
+}
+
+/* Style when input is focused */
+.search.on.ant-input-affix-wrapper {
+  width: 100% !important; /* Expand width to 100% */
+  margin-left: -50px; /* Move input from left */
+}
+
+/* Hover state for cursor */
+.search.ant-input-affix-wrapper:hover {
+  cursor: pointer !important;
+}

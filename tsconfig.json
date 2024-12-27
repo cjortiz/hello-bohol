@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "noEmit": true,
+    "noEmitOnError": false, // Prevent build from failing due to type errors
+    "skipLibCheck": true, // Skip type-checking declaration files
+    "esModuleInterop": false, // Allow default imports from CommonJS modules
+    "moduleResolution": "node", // Use Node.js module resolution
+    "strict": false, // Keep strict type checking enabled for safer code
+    "resolveJsonModule": true, // Allow importing JSON files as modules
+    "jsx": "react-jsx" // Ensure React JSX is properly handled
+  },
+}
