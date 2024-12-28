@@ -33,11 +33,10 @@ export const BackgroundImageModel = types
   }));
 
 export const DEFAULT_STATE_IMAGE = {
-  location: "Carmen",
-  name: "Chocolate Hills",
-  description:
-    "A geological masterpiece, enchanting visitors with its otherworldly beauty nestled in the heart of Bohol.",
-  stringContent: "/src/assets/images/choco.png",
+  location: "",
+  name: "",
+  description: "",
+  stringContent: "",
 };
 
 type BackgroundImageType = Instance<typeof BackgroundImageModel>;

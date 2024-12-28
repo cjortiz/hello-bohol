@@ -3,10 +3,14 @@ import { useStores } from "../../common/models";
 import { Button } from "antd";
 import { translate } from "../../common/i18n";
 import "./home.css";
-import InfiniteSlider from "../../common/components/carousel/carousel";
+import { InfiniteSlider } from "../../common/components";
+import { useEffect } from "react";
 
 export const HomePage = observer(() => {
-  const { backgroundImageStore } = useStores();
+  const { backgroundImageStore, appStateStore } = useStores();
+  useEffect(() => {
+    appStateStore.setLoading(true);
+  }, []);
   return (
     <div
       style={{
@@ -36,7 +40,6 @@ export const HomePage = observer(() => {
           <div
             style={{
               width: "100%",
-              height: "15%",
               display: "flex",
               paddingLeft: 5,
               alignItems: "end",
@@ -53,13 +56,12 @@ export const HomePage = observer(() => {
           <div
             style={{
               width: "100%",
-              height: "25%",
               display: "flex",
               alignItems: "end",
               color: "#ffffff",
               fontFamily: "DM Sans, sans-serif",
               fontSize: "90px",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Add text shadow
+              textShadow: "2px 5px 4px rgba(0, 0, 0, 0.7)", // Add text shadow
             }}
           >
             {translate("home.name", {
@@ -69,7 +71,6 @@ export const HomePage = observer(() => {
           <div
             style={{
               width: "100%",
-              height: "15%",
               display: "flex",
               paddingLeft: 5,
               alignItems: "start",
@@ -86,8 +87,8 @@ export const HomePage = observer(() => {
           <div
             style={{
               width: "100%",
-              height: "45%",
               display: "flex",
+              marginTop: "5%",
               paddingLeft: 5,
               alignItems: "center",
             }}

@@ -4,10 +4,11 @@ import { ImageBackgroundInterface } from "../../models";
 interface SliderProps {
   index: number;
   data: ImageBackgroundInterface;
+  onImageLoad?: () => void; // Optional callback for image load
 }
 
 export const SliderView = (props: SliderProps) => {
-  const { data, index } = props;
+  const { data, index, onImageLoad } = props;
   return (
     <div
       style={{
@@ -23,6 +24,14 @@ export const SliderView = (props: SliderProps) => {
         boxShadow: "10px 5px 15px rgba(0, 0, 0, 0.7)",
       }}
     >
+      <img
+        src={data.stringContent}
+        alt={`Slide ${index}`}
+        onLoad={onImageLoad} // Trigger onLoad when the image is fully loaded
+        style={{
+          display: "none", // Hide the img tag
+        }}
+      />
       <div
         style={{
           width: "100%",
