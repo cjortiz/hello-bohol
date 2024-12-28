@@ -61,6 +61,13 @@ div {
   }
 }
 
+@media (max-width: 1366px) and (max-height: 768px) {
+  .headerfont {
+    /* Example responsive styles */
+    font-size: 12px;
+  }
+}
+
 .card {
   padding: 2em;
 }

@@ -46,3 +46,52 @@
 .dot.active {
   background: gray;
 }
+
+.custom-slider-item {
+  width: 300px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.custom-container {
+  width: 100%;
+  height: 35%;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-text {
+  height: 20%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.name-text {
+  height: 80%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 28px;
+  color: rgba(255, 255, 255);
+  white-space: pre-line;
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+  .custom-slider-item {
+    /* Example responsive styles */
+    width: 210px;
+  }
+  .location-text {
+    font-size: 12px;
+  }
+  .name-text {
+    font-size: 22px;
+
+  }
+}
