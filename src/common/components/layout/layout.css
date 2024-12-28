@@ -10,6 +10,22 @@
   transition: width 0.3s ease, margin-left 0.3s ease; /* Smooth width and position change */
 }
 
+/* Default state when search is off, center the prefix */
+.search .ant-input-prefix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* When the search input is focused (onSearch is true), don't center the prefix */
+.search.on .ant-input-prefix {
+  display: flex;
+  justify-content: flex-start; /* Align the prefix to the start */
+  align-items: center;
+  width: auto;
+}
+
 /* Style when input is focused */
 .search.on.ant-input-affix-wrapper {
   width: 100% !important; /* Expand width to 100% */
@@ -19,4 +35,43 @@
 /* Hover state for cursor */
 .search.ant-input-affix-wrapper:hover {
   cursor: pointer !important;
+}
+
+.header-container {
+  height: 15%;
+  padding-left: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15%;
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+  .search.ant-input-affix-wrapper {
+    height: 30px !important; /* Default height */
+    width: 30px; /* Small width by default */
+  }
+  .search.on.ant-input-affix-wrapper {
+    margin-left: -40px; /* Move input from left */
+  }
+}
+
+@media (max-width: 811px) and (max-height: 642px) {
+  .search.ant-input-affix-wrapper {
+    height: 25px !important; /* Default height */
+    width: 25px; /* Small width by default */
+  }
+  .search.on.ant-input-affix-wrapper {
+    margin-left: -30px; /* Move input from left */
+  }
+  .header-content {
+    gap: 12%;
+  }
 }

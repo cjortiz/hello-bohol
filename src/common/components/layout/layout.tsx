@@ -32,30 +32,14 @@ export const Layout = observer((props: LayoutProps) => {
           opacity: 0.95,
         }}
       >
-        <div
-          style={{
-            height: "15%",
-            paddingLeft: "2%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="header-container">
           <div className="headerfont">{translate("header.title")}</div>
 
-          <div
-            style={{
-              width: "35%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              gap: "15%",
-            }}
-          >
+          <div className="header-content">
             <div className="headerfont">{translate("header.home")}</div>
             <div className="headerfont">{translate("header.destination")}</div>
             <div className="headerfont">{translate("header.about")}</div>
-            <div>
+            <div style={{ marginLeft: 10 }}>
               <Input
                 className={`search ${onSearch ? "on" : ""}`}
                 prefix={<SearchOutlined style={{ color: "#ffffff" }} />}

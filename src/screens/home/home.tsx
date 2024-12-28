@@ -31,7 +31,9 @@ export const HomePage = observer(() => {
             })}
           </div>
           <div className="explore-flex-style">
-            <Button className="explore">{translate("home.explore")}</Button>
+            <Button className="explore">
+              <span className="explore-text">{translate("home.explore")}</span>
+            </Button>
           </div>
         </div>
         <div className="right-container ">

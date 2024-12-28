@@ -123,6 +123,22 @@
   }
 }
 
+@media (max-width: 811px) and (max-height: 642px) {
+  .location-text-style {
+    font-size: 15px;
+  }
+  .name-text-style {
+    /* Example responsive styles */
+    font-size: 45px;
+  }
+  .desc-text-style {
+    font-size: 12px;
+  }
+  .explore-text {
+    font-size: 12px;
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
