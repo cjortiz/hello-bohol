@@ -4,5 +4,11 @@
     "home": "Home",
     "destination": "Destination",
     "about": "About"
+  },
+  "home": {
+    "location": "{{location}}",
+    "name": "{{name}}",
+    "description": "{{description}}",
+    "explore": "Explore"
   }
 }

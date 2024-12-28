@@ -30,6 +30,7 @@ export const Layout = observer((props: LayoutProps) => {
         background: `url(${backgroundImageStore?.stringContent}) no-repeat center center`, // Set background image
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
+        opacity: .95
       }}
     >
       <div

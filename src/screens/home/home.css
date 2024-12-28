@@ -1,0 +1,53 @@
+.explore.ant-btn {
+  border: 2px solid #ffffff !important; /* Default border color */
+  border-radius: 20px !important; /* Default border radius */
+  height: 40px !important; /* Default height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Box shadow */
+  width: 25%; /* Small width by default */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ) !important; /* Semi-transparent background */
+  backdrop-filter: blur(2px); /* Add blur effect to the background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+}
+
+.explore.ant-btn:hover {
+  color: #ffffff !important ;
+  backdrop-filter: blur(
+    10px
+  ) !important; /* Add blur effect to the background */
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: lightblue;
+  padding: 50px 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
