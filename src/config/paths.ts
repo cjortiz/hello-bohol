@@ -1,6 +1,14 @@
 export const PATHS = {
-  HOME: {
+  Main: {
     path: "/",
+    label: "Main",
+  },
+  DESTINATION: {
+    path: "/destination",
+    label: "Destination",
+  },
+  HOME: {
+    path: "/home",
     label: "Home",
   },
   ABOUT: {

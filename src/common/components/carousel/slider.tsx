@@ -12,7 +12,7 @@ export const SliderView = (props: SliderProps) => {
   const { data, index, onImageLoad } = props;
   return (
     <div
-      className="custom-slider-item "
+      className="home-custom-slider-item "
       style={{ backgroundImage: `url(${data.stringContent})` }}
     >
       <img
@@ -23,11 +23,11 @@ export const SliderView = (props: SliderProps) => {
           display: "none", // Hide the img tag
         }}
       />
-      <div className="custom-container ">
-        <span className="location-text">
+      <div className="home-custom-container">
+        <span className="home-location-text">
           {translate("home.location", { location: data.location })}
         </span>
-        <span className="name-text">
+        <span className="home-name-text">
           {translate("home.name", { name: data.name })}
         </span>
       </div>

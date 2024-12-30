@@ -19,9 +19,7 @@ function App() {
 
   return (
     <RootStoreProvider value={rootStore}>
-      <Layout>
         <AppRoutes />
-      </Layout>
     </RootStoreProvider>
   );
 }

@@ -36,7 +36,6 @@ export const InfiniteSlider = observer(() => {
     if (finalIndex >= 11) {
       finalIndex = activeIndex - 12;
     }
-    console.log(activeIndex);
 
     backgroundImageStore.setStringContent(SampleSliders[finalIndex]);
   };

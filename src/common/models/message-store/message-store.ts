@@ -14,7 +14,6 @@ export const MessageStoreModel = types
       self.type = type;
       self.content = message;
       self.open = true;
-      console.log(toJS(self));
     },
   }))
   .actions((self) => ({

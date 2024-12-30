@@ -13,6 +13,7 @@ import { ImageBackgroundInterface } from "../models";
 
 export const SampleSliders: ImageBackgroundInterface[] = [
   {
+    isHome: true,
     stringContent: Chocolate,
     name: "Chocolate\nHills",
     location: "Carmen",
@@ -20,6 +21,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "A geological masterpiece, enchanting visitors with its otherworldly beauty nestled in the heart of Bohol.",
   },
   {
+    isHome: true,
     stringContent: AliciaPark,
     name: "Alicia Panoramic\nPark",
     location: "Alicia",
@@ -27,6 +29,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "Panoramic vistas and cultural richness – a serene escape into the heart of Bohol's captivating landscape.",
   },
   {
+    isHome: true,
     stringContent: Anda,
     name: "Anda White\nSand Beaches",
     location: "Anda",
@@ -34,6 +37,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "Powdery sands and crystal-clear waters where sun, sea, and relaxation come together in perfect harmony.",
   },
   {
+    isHome: true,
     stringContent: Balicasag,
     name: "Balicasag\nIsland",
     location: "Panglao",
@@ -48,6 +52,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
   //       "A subterranean paradise, inviting adventurers to explore its crystal-clear waters and marvel at its beauty.",
   //   },
   {
+    isHome: true,
     stringContent: Canumantad,
     name: "Can-umantad\nFalls",
     location: "Candijay",
@@ -55,6 +60,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "One of Bohol's tallest waterfalls, offering lush greenery and cool, cascading waters for a nature-filled escape.",
   },
   {
+    isHome: true,
     stringContent: Danao,
     name: "Danao Adventure\nPark",
     location: "Danao",
@@ -62,6 +68,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "Where ziplining, rappelling, and caving offer an adrenaline-fueled escape amidst Bohol's landscapes.",
   },
   {
+    isHome: true,
     stringContent: Himantagon,
     name: "Himontagon\nHills",
     location: "Loay",
@@ -69,6 +76,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "A breathtaking escape into the rolling hills that frame Bohol's picturesque countryside.",
   },
   {
+    isHome: true,
     stringContent: Loboc,
     name: "Loboc River\nCruise",
     location: "Loboc",
@@ -76,6 +84,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "A tranquil river cruise, where lush greenery and cultural performances paint a picturesque backdrop.",
   },
   {
+    isHome: true,
     stringContent: ManMade,
     name: "Mand-made\nForest",
     location: "Bilar",
@@ -83,6 +92,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "A captivating stretch of towering mahogany trees that create a serene and enchanting atmosphere.",
   },
   {
+    isHome: true,
     stringContent: Pamilacan,
     name: "Pamilacan\nIsland",
     location: "Pamilacan",
@@ -90,6 +100,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "Pristine beaches and unforgettable encounters with dolphins and whales – a true beach lover’s paradise.",
   },
   {
+    isHome: true,
     stringContent: Tarsier,
     name: "Tarsier\nSanctuary",
     location: "Corella",

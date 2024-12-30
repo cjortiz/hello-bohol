@@ -1,0 +1,108 @@
+.dest-main-container {
+  height: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20;
+}
+
+.custom-slider-item {
+  width: 100%;
+  height: 325px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.custom-slider-item:hover {
+  cursor: pointer;
+}
+
+.custom-container {
+  width: 100%;
+  height: 35%;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-text {
+  height: 20%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.name-text {
+  height: 80%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 28px;
+  color: rgba(255, 255, 255);
+  white-space: pre-line;
+}
+
+.custom-scrollbar {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  height: 75%;
+  min-height: 60%;
+  flex-direction: row;
+  overflow: auto;
+  flex-wrap: wrap;
+  gap: 35px;
+  align-content: flex-start;
+}
+
+/* Style the scrollbar itself (track) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Adjust the width of the scrollbar */
+  height: 421px;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    199,
+    220,
+    205,
+    0.5
+  ); /* Light color for the track with 10% opacity */
+  border-radius: 10px; /* Round the corners of the thumb */
+}
+
+/* Style when the thumb is hovered */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color when hovered */
+}
+
+/* Style the scrollbar track (the area the thumb slides in) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(
+    199,
+    220,
+    205,
+    0.1
+  ); /* Light color for the track with 10% opacity */
+  border-radius: 10px;
+}
+
+/* Optional: Style the corner if both horizontal and vertical scrollbars are present */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+@media (min-width: 1366px) {
+  .location-text {
+    font-size: 12px;
+  }
+  .name-text {
+    font-size: 22px;
+  }
+}
