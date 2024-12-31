@@ -13,6 +13,15 @@
   },
   "destination": {
     "title": "Destinations",
-    "titleDesc": "Discover the natural charm of Bohol through our curated list of enchanting destinations, \nproviding essential insights for your memorable tropical adventure."
+    "titleDesc": "Discover the natural charm of Bohol through our curated list of enchanting destinations, \nproviding essential insights for your memorable tropical adventure.",
+    "explore": "Explore {{location}}"
+  },
+  "settings": {
+    "title": "Quick Settings"
+  },
+  "inner": {
+    "title": "History of",
+    "location": "{{location}}",
+    "description": "{{description}}"
   }
 }

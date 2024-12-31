@@ -1,0 +1,48 @@
+.draggable-settings-panel {
+  position: relative;
+  top: 75%;
+  left: 2%;
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  opacity: 0.5;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  cursor: move;
+  font-weight: bold;
+}
+
+.settings-header span {
+  flex: 1;
+}
+
+.settings-content {
+  margin-top: 10px;
+}
+
+.setting-item {
+  margin-bottom: 12px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  border: none;
+  background-color: #1890ff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #40a9ff;
+}

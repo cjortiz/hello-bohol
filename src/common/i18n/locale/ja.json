@@ -1,7 +1,27 @@
 {
-  "common": {
-    "ok": "OK 🇯🇵",
-    "cancel": "Cancel 🇯🇵",
-    "back": "Back 🇯🇵"
+  "header": {
+    "title": "タナ！",
+    "home": "ホーム",
+    "destination": "目的地",
+    "about": "アバウト"
+  },
+  "home": {
+    "location": "{{location}}",
+    "name": "{{name}}",
+    "description": "{{description}}",
+    "explore": "探検する"
+  },
+  "destination": {
+    "title": "目的地",
+    "titleDesc": "ボホールの自然の魅力を、忘れられない熱帯の冒険のために必須の洞察を提供する魅力的な目的地のリストを通して発見してください。",
+    "explore": "{{location}} を探索"
+  },
+  "settings": {
+    "title": "クイック設定"
+  },
+  "inner": {
+    "title": "歴史の",
+    "location": "{{location}}",
+    "description": "{{description}}"
   }
 }

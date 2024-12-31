@@ -11,6 +11,10 @@ export const PATHS = {
     path: "/home",
     label: "Home",
   },
+  INNER: {
+    path: "/view",
+    label: "View",
+  },
   ABOUT: {
     path: "/about",
     label: "About",

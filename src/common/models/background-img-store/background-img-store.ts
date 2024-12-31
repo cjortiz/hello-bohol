@@ -7,6 +7,7 @@ export interface ImageBackgroundInterface {
   name: string;
   description: string;
   isHome: boolean;
+  innerDescription: string;
 }
 
 export const BackgroundImageModel = types
@@ -16,20 +17,24 @@ export const BackgroundImageModel = types
     location: types.string,
     name: types.string,
     description: types.string,
+    innerDescription: types.string,
     isHome: types.boolean,
   })
   .actions((self) => ({
     setStringContent: (image: ImageBackgroundInterface) => {
-      self.stringContent = image.stringContent;
-      self.location = image.location;
-      self.name = image.name;
-      self.description = image.description;
-      self.isHome = image.isHome;
+      if (image) {
+        self.stringContent = image.stringContent;
+        self.location = image.location;
+        self.name = image.name;
+        self.description = image.description;
+        self.isHome = image.isHome;
+        self.innerDescription = image.innerDescription;
+      }
+
+      console.log(toJS(self));
     },
     onOtherScreen: () => {
       self.isHome = false;
-      self.stringContent = "";
-      console.log(toJS(self));
     },
   }))
 
@@ -48,6 +53,7 @@ export const DEFAULT_STATE_IMAGE = {
   name: "",
   description: "",
   stringContent: "",
+  innerDescription: "",
   isHome: true,
 };
 

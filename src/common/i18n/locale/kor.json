@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "타나 !",
+    "home": "홈",
+    "destination": "목적지",
+    "about": "소개"
+  },
+  "home": {
+    "location": "{{location}}",
+    "name": "{{name}}",
+    "description": "{{description}}",
+    "explore": "탐험하기"
+  },
+  "destination": {
+    "title": "목적지",
+    "titleDesc": "보홀의 자연의 매력을 우리의 선정된 매력적인 목적지 목록을 통해 발견하십시오. \n당신의 기억에 남을 열대 모험을 위한 필수적인 통찰력을 제공합니다.",
+    "explore": "{{location}} 탐험"
+  },
+  "settings": {
+    "title": "빠른 설정"
+  },
+  "inner": {
+    "title": "역사의",
+    "location": "{{location}}",
+    "description": "{{description}}"
+  }
+}

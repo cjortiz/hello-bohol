@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, Virtual } from "swiper/modules";
 import { SliderView } from "./slider";
 import { SampleSliders } from "../../constants/constants";
 import { useEffect, useState } from "react";
@@ -70,7 +70,7 @@ export const InfiniteSlider = observer(() => {
         }}
       >
         {SampleSliders.map((data, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} >
             <SliderView
               data={data}
               index={index}
@@ -79,7 +79,7 @@ export const InfiniteSlider = observer(() => {
           </SwiperSlide>
         ))}
         {SampleSliders.map((data, index) => (
-          <SwiperSlide key={`duplicate-${index}`}>
+          <SwiperSlide key={`duplicate-${index}`} >
             <SliderView
               data={data}
               index={index}

@@ -1,5 +1,5 @@
 import { Input } from "antd";
-import { translate } from "../../i18n";
+import { i18n, translate } from "../../i18n";
 import { SearchOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import "./layout.css";
@@ -9,24 +9,18 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { PATHS } from "../../../config";
 import { SampleSliders } from "../../constants/constants";
 import { toJS } from "mobx";
+import QuickAccess from "../quickaccess/quick-access";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const onOtherScreenData: ImageBackgroundInterface = {
-  stringContent: "",
-  location: "",
-  name: "",
-  description: "",
-  isHome: false,
-};
-
 export const Layout = observer(() => {
   const navigate = useNavigate();
   const { backgroundImageStore, appStateStore } = useStores();
-  const [updateKey, setUpdateKey] = useState<number>(0);
+  const [_, setUpdateKey] = useState<number>(0);
   const [onSearch, setOnSearch] = useState<boolean>(false);
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   const forceReRender = () => setUpdateKey((prev) => prev + 1);
 
@@ -36,6 +30,15 @@ export const Layout = observer(() => {
 
   const handleNavigate = (path: string) => {
     navigate(path);
+  };
+
+  const handlerChange = () => {
+    i18n.locale = "ja";
+    forceReRender();
+  };
+
+  const handleLoad = () => {
+    setLoaded(true);
   };
 
   useEffect(() => {
@@ -50,19 +53,23 @@ export const Layout = observer(() => {
 
   return (
     <div
+      className={`layout-main-container ${loaded ? "loaded" : ""}`}
       style={{
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
         background: `${
           backgroundImageStore.isHome
             ? `url(${backgroundImageStore?.stringContent}) center center / cover no-repeat, #132119`
             : "#132119"
-        }`, // Set background image and color
-        opacity: 0.95,
+        }`,
       }}
     >
+      <img
+        src={backgroundImageStore?.stringContent}
+        alt={backgroundImageStore.name}
+        onLoad={handleLoad} // Trigger onLoad when the image is fully loaded
+        style={{
+          display: "none", // Hide the img tag
+        }}
+      />
       <div className="header-container">
         <div className="headerfont">{translate("header.title")}</div>
 
@@ -91,12 +98,14 @@ export const Layout = observer(() => {
               prefix={<SearchOutlined style={{ color: "#ffffff" }} />}
               onFocus={handleClick}
               onBlur={() => setOnSearch(false)}
+              placeholder={translate("header.destination")}
             />
           </div>
         </div>
       </div>
+      {/* <QuickAccess /> */}
       <div style={{ height: "85%" }}>
-        <Outlet />
+        <Outlet key={_} />
       </div>
     </div>
   );

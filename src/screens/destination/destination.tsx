@@ -1,11 +1,16 @@
 import { observer } from "mobx-react-lite";
 import { useEffect, useState, useRef } from "react";
-import { useStores } from "../../common/models";
+import { ImageBackgroundInterface, useStores } from "../../common/models";
 import { translate } from "../../common/i18n";
 import { SampleSliders } from "../../common/constants/constants";
 import "./destination.css";
+import { useNavigate } from "react-router-dom";
+import { PATHS } from "../../config";
+import { Popover } from "antd";
 
 export const Destination = observer(() => {
+  const { backgroundImageStore } = useStores();
+  const navigate = useNavigate();
   const [visibleItems, setVisibleItems] = useState(new Set());
   const containerRef = useRef(null);
 
@@ -53,6 +58,12 @@ export const Destination = observer(() => {
     };
   }, []);
 
+  const handleInnerPage = (data: ImageBackgroundInterface) => {
+    backgroundImageStore.setStringContent(data);
+
+    navigate(`${PATHS.INNER.path}/${backgroundImageStore.name}`);
+  };
+
   return (
     <div className="dest-main-container">
       <span
@@ -76,48 +87,39 @@ export const Destination = observer(() => {
         {translate("destination.titleDesc")}
       </span>
 
-      <div
-        className="custom-scrollbar"
-        ref={containerRef}
-        style={{
-          maxHeight: "500px",
-          overflowY: "auto",
-          display: "flex",
-          flexWrap: "wrap",
-        }}
-      >
+      <div className="custom-scrollbar" ref={containerRef}>
         {SampleSliders.map((slides, index) => {
           const isVisible = visibleItems.has(index);
 
           return (
-            <div
-              key={index}
-              className={`slider-item ${isVisible ? "visible" : "hidden"}`}
-              data-index={index}
-              style={{
-                height: "325px",
-                width: "257px",
-                borderRadius: "35px",
-                margin: "10px",
-                position: "relative",
-                opacity: isVisible ? 1 : 0.5,
-                transition: "opacity 0.5s ease-in-out",
-              }}
+            <Popover
+              title={translate("destination.explore", {
+                location: slides.name,
+              })}
             >
               <div
-                className="custom-slider-item"
-                style={{ backgroundImage: `url(${slides.stringContent})` }}
+                key={index}
+                className={`slider-item ${isVisible ? "visible" : "hidden"}`}
+                data-index={index}
+                onClick={() => handleInnerPage(slides)}
               >
-                <div className="custom-container">
-                  <span className="location-text">
-                    {translate("home.location", { location: slides.location })}
-                  </span>
-                  <span className="name-text">
-                    {translate("home.name", { name: slides.name })}
-                  </span>
+                <div
+                  className="custom-slider-item"
+                  style={{ backgroundImage: `url(${slides.stringContent})` }}
+                >
+                  <div className="custom-container">
+                    <span className="location-text">
+                      {translate("home.location", {
+                        location: slides.location,
+                      })}
+                    </span>
+                    <span className="name-text">
+                      {translate("home.name", { name: slides.name })}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Popover>
           );
         })}
       </div>

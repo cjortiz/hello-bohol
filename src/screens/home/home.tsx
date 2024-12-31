@@ -5,12 +5,16 @@ import { translate } from "../../common/i18n";
 import "./home.css";
 import { InfiniteSlider } from "../../common/components";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { PATHS } from "../../config";
 
 export const HomePage = observer(() => {
+  const navigate = useNavigate();
   const { backgroundImageStore, appStateStore } = useStores();
   useEffect(() => {
     appStateStore.setLoading(true);
   }, []);
+
   return (
     <div className="main-container">
       <div className="sub-container">
@@ -31,7 +35,12 @@ export const HomePage = observer(() => {
             })}
           </div>
           <div className="explore-flex-style">
-            <Button className="explore">
+            <Button
+              className="explore"
+              onClick={() =>
+                navigate(`${PATHS.INNER.path}/${backgroundImageStore.name}`)
+              }
+            >
               <span className="explore-text">{translate("home.explore")}</span>
             </Button>
           </div>
