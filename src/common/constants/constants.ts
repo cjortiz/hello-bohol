@@ -11,8 +11,18 @@ import ManMade from "../../assets/images/manmade.jpg";
 import Pamilacan from "../../assets/images/pamilacan.jpg";
 import { ImageBackgroundInterface } from "../models";
 
+import MountainIcon from "../../assets/icons/mountain.png";
+import PinIcon from "../../assets/icons/pin.png";
+import FlagIcon from "../../assets/icons/flag.png";
+import CaseIcon from "../../assets/icons/case.png";
+import MemoIcon from "../../assets/icons/memo.png";
+import RoutIcon from "../../assets/icons/route.png";
+
+export { MountainIcon, PinIcon, FlagIcon, CaseIcon, MemoIcon, RoutIcon };
+
 export const SampleSliders: ImageBackgroundInterface[] = [
   {
+    distance: 55,
     isHome: true,
     stringContent: Chocolate,
     name: "Chocolate\nHills",
@@ -23,6 +33,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
       "Nestled in the heart of Bohol, the Chocolate Hills stand as a geological masterpiece, enchanting visitors with their otherworldly beauty. These extraordinary hills, numbering over 1,200, are scattered across the municipalities of Carmen, Batuan, and Sagbayan, creating a landscape reminiscent of giant chocolate kisses. While the view is breathtaking at any time, the hills earn their name during the dry season when the grass covering them turns a rich chocolate brown, creating a truly mesmerizing spectacle. The Chocolate Hills have not only fascinated geologists but also sparked local legends. According to one popular folklore, the hills were formed from the tears of a giant named Arogo, who wept uncontrollably over unrequited love. Another tale attributes their creation to two feuding giants hurling massive rocks at each other, with the Chocolate Hills being the remnants of their epic battle. On a geological note, scientists suggest that the hills originated from the uplift of coral deposits and the subsequent weathering and erosion over centuries. The result is this unique and awe-inspiring landscape that has become a symbol of Bohol.",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: AliciaPark,
     name: "Alicia Panoramic\nPark",
@@ -32,6 +43,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Anda,
     name: "Anda White\nSand Beaches",
@@ -41,6 +53,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Balicasag,
     name: "Balicasag\nIsland",
@@ -57,6 +70,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
   //       "A subterranean paradise, inviting adventurers to explore its crystal-clear waters and marvel at its beauty.",
   //   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Canumantad,
     name: "Can-umantad\nFalls",
@@ -66,6 +80,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Danao,
     name: "Danao Adventure\nPark",
@@ -75,6 +90,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Himantagon,
     name: "Himontagon\nHills",
@@ -84,6 +100,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Loboc,
     name: "Loboc River\nCruise",
@@ -94,6 +111,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: ManMade,
     name: "Mand-made\nForest",
@@ -103,6 +121,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Pamilacan,
     name: "Pamilacan\nIsland",
@@ -112,6 +131,7 @@ export const SampleSliders: ImageBackgroundInterface[] = [
     innerDescription: "",
   },
   {
+    distance: 55,
     isHome: true,
     stringContent: Tarsier,
     name: "Tarsier\nSanctuary",

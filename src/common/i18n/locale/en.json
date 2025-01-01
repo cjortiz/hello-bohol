@@ -22,6 +22,12 @@
   "inner": {
     "title": "History of",
     "location": "{{location}}",
-    "description": "{{description}}"
+    "description": "{{description}}",
+    "geological": "Geological\nFormation",
+    "distance": "{{distance}}km from\nCity Center",
+    "history": "History",
+    "todo": "Things to do",
+    "howto": "How to get there",
+    "book": "Book tours & stays"
   }
 }

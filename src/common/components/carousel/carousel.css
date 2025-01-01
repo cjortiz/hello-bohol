@@ -87,7 +87,7 @@
   white-space: pre-line;
 }
 
-@media (min-width: 1366px) {
+@media (max-width: 1366px) {
   .home-custom-slider-item {
     /* Example responsive styles */
     width: 220px;

@@ -22,6 +22,7 @@
   "inner": {
     "title": "歴史の",
     "location": "{{location}}",
-    "description": "{{description}}"
+    "description": "{{description}}",
+    "geological": "地質学的形成"
   }
 }

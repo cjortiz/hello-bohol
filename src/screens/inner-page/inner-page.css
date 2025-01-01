@@ -10,7 +10,7 @@
 }
 
 .left-inner-container {
-  width: 560px;
+  width: 600px;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -27,7 +27,7 @@
 }
 
 .right-inner-container {
-  width: 560px;
+  width: 800px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -36,17 +36,86 @@
 .title-text {
   font-family: "Inter", sans-serif;
   color: rgba(255, 255, 255, 0.6);
+  font-size: 30px;
 }
 .name-location-text {
   font-family: "DM Sans", sans-serif;
   font-weight: bolder;
   color: rgba(255, 255, 255);
-  font-size: 37.69px;
+  font-size: 90px;
 }
 .description-text {
   font-family: "Inter", sans-serif;
-  font-size: 18.49px;
+  font-size: 26px;
   color: rgba(255, 255, 255);
+}
+
+.icon-desc-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.geological-parent {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.button-container {
+  display: flex;
+}
+
+.geological-text {
+  font-family: "Inter", sans-serif;
+  font-size: 22.61px;
+  color: #ffffff;
+  white-space: pre-line;
+}
+
+.inner-button-container {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  grid-column-gap: 0px;
+  align-items: center;
+}
+
+.inner-button.ant-btn {
+  border: 1px solid#315c52 !important;
+  border-radius: 26.6px !important;
+  height: 105px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
+  width: 298px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  padding-left: 30px;
+  justify-content: start; /* Center items horizontally */
+  gap: 8px; /* Optional: Space between icon and text */
+  text-align: center; /* Ensure text is centered */
+}
+.inner-button.ant-btn:hover {
+  background-color: unset !important;
+}
+
+
+.geological-container {
+  height: 85.13px;
+  width: 85.13px;
+  background-color: rgba(35, 60, 54, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
 }
 
 /* @media (max-wid) {

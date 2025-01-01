@@ -22,6 +22,8 @@
   "inner": {
     "title": "역사의",
     "location": "{{location}}",
-    "description": "{{description}}"
+    "description": "{{description}}",
+    "geological": "지질학적 형성"
+
   }
 }

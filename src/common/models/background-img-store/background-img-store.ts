@@ -8,6 +8,7 @@ export interface ImageBackgroundInterface {
   description: string;
   isHome: boolean;
   innerDescription: string;
+  distance: number;
 }
 
 export const BackgroundImageModel = types
@@ -19,6 +20,7 @@ export const BackgroundImageModel = types
     description: types.string,
     innerDescription: types.string,
     isHome: types.boolean,
+    distance: types.number,
   })
   .actions((self) => ({
     setStringContent: (image: ImageBackgroundInterface) => {
@@ -29,9 +31,8 @@ export const BackgroundImageModel = types
         self.description = image.description;
         self.isHome = image.isHome;
         self.innerDescription = image.innerDescription;
+        self.distance = image.distance;
       }
-
-      console.log(toJS(self));
     },
     onOtherScreen: () => {
       self.isHome = false;
@@ -55,6 +56,7 @@ export const DEFAULT_STATE_IMAGE = {
   stringContent: "",
   innerDescription: "",
   isHome: true,
+  distance: 0,
 };
 
 type BackgroundImageType = Instance<typeof BackgroundImageModel>;

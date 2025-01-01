@@ -112,7 +112,7 @@
   background-color: #f1f1f1;
 }
 
-@media (min-width: 1366px) {
+@media (max-width: 1366px) {
   .location-text {
     font-size: 12px;
   }

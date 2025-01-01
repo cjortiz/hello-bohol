@@ -61,7 +61,7 @@ div {
   }
 }
 
-@media (min-width: 1366px) {
+@media (max-width: 1366px) {
   .headerfont {
     /* Example responsive styles */
     font-size: 12px;
