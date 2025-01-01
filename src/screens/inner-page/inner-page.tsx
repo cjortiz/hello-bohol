@@ -14,6 +14,7 @@ import {
   RoutIcon,
 } from "../../common/constants/constants";
 import { Button, Flex, Space } from "antd";
+import { Maps } from "../../common/components";
 
 export const InnerPage = observer(() => {
   const { backgroundImageStore } = useStores();
@@ -21,6 +22,7 @@ export const InnerPage = observer(() => {
   const [title, setTitle] = useState<string>(backgroundImageStore.location);
   const [desc, setDesc] = useState<string>(backgroundImageStore.description);
   const [showIconDesc, setShowIconDesc] = useState<boolean>(true);
+  const [openMaps, setOpenMaps] = useState<boolean>(false);
 
   const handleLoad = () => {
     setLoaded(true);
@@ -99,7 +101,7 @@ export const InnerPage = observer(() => {
           <Button className="inner-button" iconPosition="start">
             {buttonContainer(FlagIcon, translate("inner.history"))}
           </Button>
-          <Button className="inner-button">
+          <Button className="inner-button" onClick={() => setOpenMaps(true)}>
             {buttonContainer(RoutIcon, translate("inner.howto"))}
           </Button>
           <Button className="inner-button">
@@ -110,6 +112,7 @@ export const InnerPage = observer(() => {
           </Button>
         </div>
       </div>
+      <Maps open={openMaps} onClose={() => setOpenMaps(false)} />
     </div>
   );
 });

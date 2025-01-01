@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
+    "@react-google-maps/api": "^2.20.5",
     "@tsparticles/react": "^3.0.0",
     "antd": "^5.22.6",
+    "dotenv": "^16.4.7",
     "i18n-js": "^4.5.1",
     "mobx": "^6.13.5",
     "mobx-react-lite": "^4.1.0",

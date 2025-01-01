@@ -28,6 +28,7 @@
     "history": "History",
     "todo": "Things to do",
     "howto": "How to get there",
-    "book": "Book tours & stays"
+    "book": "Book tours & stays",
+    "mapLoc":"{{location}}'s Location"
   }
 }

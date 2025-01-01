@@ -9,6 +9,13 @@ export interface ImageBackgroundInterface {
   isHome: boolean;
   innerDescription: string;
   distance: number;
+  coordinates: CoordinatesInterface;
+  origin: CoordinatesInterface;
+}
+
+export interface CoordinatesInterface {
+  lat: number;
+  lng: number;
 }
 
 export const BackgroundImageModel = types
@@ -21,6 +28,14 @@ export const BackgroundImageModel = types
     innerDescription: types.string,
     isHome: types.boolean,
     distance: types.number,
+    coordinates: types.model("Coordinates", {
+      lat: types.number,
+      lng: types.number,
+    }),
+    origin: types.model("OriginCoordinates", {
+      lat: types.number,
+      lng: types.number,
+    }),
   })
   .actions((self) => ({
     setStringContent: (image: ImageBackgroundInterface) => {
@@ -32,6 +47,8 @@ export const BackgroundImageModel = types
         self.isHome = image.isHome;
         self.innerDescription = image.innerDescription;
         self.distance = image.distance;
+        self.coordinates = image.coordinates;
+        self.origin = image.origin;
       }
     },
     onOtherScreen: () => {
@@ -57,6 +74,8 @@ export const DEFAULT_STATE_IMAGE = {
   innerDescription: "",
   isHome: true,
   distance: 0,
+  coordinates: { lat: 0, lng: 0 },
+  origin: { lat: 0, lng: 0 },
 };
 
 type BackgroundImageType = Instance<typeof BackgroundImageModel>;
